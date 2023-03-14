@@ -46,11 +46,9 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("largest")) {
-    var first_half = query.split(",")[0];
-    var second_half = query.split(",")[1];
-    var third_half = query.split(",")[2];
-    console.log(first_half);
-    console.log(second_half);
+    var first_half = query.split(" ")[-1];
+    var second_half = query.split(" ")[-2];
+    var third_half = query.split(" ")[-3];
     var num1 = Number(first_half.replace(/[^0-9]/g, ''));
     var num2 = Number(second_half.replace(/[^0-9]/g, ''));
     var num3 = Number(third_half.replace(/[^0-9]/g, ''));
