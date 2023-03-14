@@ -45,15 +45,17 @@ export default function QueryProcessor(query: string): string {
     return Math.pow(num1, num2).toString();
   }
 
-  // if (query.toLowerCase().includes("largest")) {
-  //   var first_half = query.split(",")[0];
-  //   var second_half = query.split(",")[1];
-  //   var third_half = query.split(",")[2];
-  //   var num1 = Number(first_half.replace(/[^0-9]/g, ''));
-  //   var num2 = Number(second_half.replace(/[^0-9]/g, ''));
-  //   var num3 = Number(third_half.replace(/[^0-9]/g, ''));
-  //   return Math.max(num1,num2,num3).toString();
-  // }
+  if (query.toLowerCase().includes("largest")) {
+    var first_half = query.split(",")[0];
+    var second_half = query.split(",")[1];
+    var third_half = query.split(",")[2];
+    console.log(first_half);
+    console.log(second_half);
+    var num1 = Number(first_half.replace(/[^0-9]/g, ''));
+    var num2 = Number(second_half.replace(/[^0-9]/g, ''));
+    var num3 = Number(third_half.replace(/[^0-9]/g, ''));
+    return Math.max(num1,num2,num3).toString();
+  }
 
   return "";
 }
