@@ -21,9 +21,9 @@ export default function QueryProcessor(query: string): string {
     return (num1+num2).toString();
   }
 
-  if (query.toLowerCase().includes("multiply")) {
-    var first_half = query.split("multiply")[0];
-    var second_half = query.split("multiply")[1];
+  if (query.toLowerCase().includes("multiplied")) {
+    var first_half = query.split("multiplied")[0];
+    var second_half = query.split("multiplied")[1];
     var num1 = Number(first_half.replace(/[^0-9]/g, ''));
     var num2 = Number(second_half.replace(/[^0-9]/g, ''));
     return (num1*num2).toString();
