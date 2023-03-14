@@ -13,5 +13,15 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("plus")) {
+    return (query.split(" ")[-1] + query.split(" ")[-3]).toString();
+  }
+
+  // if (query.toLowerCase().includes("")) {
+  //   return (
+  //     "156"
+  //   );
+  // }
+
   return "";
 }
