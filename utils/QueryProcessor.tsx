@@ -14,7 +14,11 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("plus")) {
-    return (query.split(" ")[-1] + query.split(" ")[-3]).toString();
+    var first_half = query.split("plus")[0];
+    var second_half = query.split("plus")[1];
+    var num1 = Number(first_half.replace(/[^0-9]/g, ''));
+    var num2 = Number(second_half.replace(/[^0-9]/g, ''));
+    return (num1+num2).toString();
   }
 
   // if (query.toLowerCase().includes("")) {
