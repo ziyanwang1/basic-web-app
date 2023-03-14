@@ -37,6 +37,14 @@ export default function QueryProcessor(query: string): string {
     return (num1-num2).toString();
   }
 
+  if (query.toLowerCase().includes("to the power of")) {
+    var first_half = query.split("power")[0];
+    var second_half = query.split("power")[1];
+    var num1 = Number(first_half.replace(/[^0-9]/g, ''));
+    var num2 = Number(second_half.replace(/[^0-9]/g, ''));
+    return Math.pow(num1, num2).toString();
+  }
+
   // if (query.toLowerCase().includes("largest")) {
   //   var first_half = query.split(",")[0];
   //   var second_half = query.split(",")[1];
